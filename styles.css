@@ -1,0 +1,45 @@
+@import url('https://fonts.cdnfonts.com/css/vcr-osd-mono');
+
+body {
+    background: black; /* Чёрный фон */
+    font-family: 'VCR OSD Mono', monospace;
+    color: white;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.window {
+    width: 500px;
+    background: black; /* Чёрный фон окна */
+    border: 2px solid white;
+    box-shadow: 5px 5px 0 white;
+}
+
+.title-bar {
+    background: #222;
+    padding: 5px;
+    text-align: center;
+    font-weight: bold;
+    border-bottom: 2px solid white;
+}
+
+.content {
+    padding: 20px;
+}
+
+.ascii {
+    font-size: 14px;
+    white-space: pre;
+}
+
+a {
+    color: cyan;
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
