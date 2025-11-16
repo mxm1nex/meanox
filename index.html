@@ -53,23 +53,27 @@ __        _______ _     ____ ___  __  __ _____
 
     <p class="footer-text">© 2025 Meanox. All rights reserved.</p>
 
-    <script>
-        const w = document.getElementById("w-w");
-        const n = document.getElementById("n-w");
+<script>
+    const wmain = document.getElementById('welcome-window')
+    const wnews = document.getElementById('n-w')
 
-        document.getElementById("c-n").onclick = () => {
-            wmelcome.style.display = "none";
-            wnews.style.display = "block";
-        };
+    const btnMainClose = document.getElementById('close-welcome')
+    const btnNewsClose = document.getElementById('c-n')
 
-        document.getElementById("c-n").onclick = () => {
-            wnews.style.display = "none";
-            wmelcome.style.display = "block";
-        };
-    </script>
+    btnMainClose.onclick = function () {
+        wMain.style.display = 'none'
+        wNews.style.display = 'block'
+    }
+
+    btnNewsClose.onclick = function () {
+        wNews.style.display = 'none'
+        wMain.style.display = 'block'
+    }
+</script>
 
 </body>
 </html>
+
 
 
 
