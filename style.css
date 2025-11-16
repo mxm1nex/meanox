@@ -1,136 +1,77 @@
 @import url('https://fonts.cdnfonts.com/css/vcr-osd-mono');
 
-body {
-    background: black;
-    font-family: 'VCR OSD Mono', monospace;
-    color: white;
-    text-align: left;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    margin: 0;
-    box-sizing: border-box;
+body{
+    background:#000;
+    font-family:'VCR OSD Mono',monospace;
+    color:#fff;
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 
-.window {
-    width: 90%;
-    max-width: 500px;
-    background: black;
-    border: 2px solid white;
-    box-shadow: 5px 5px 0 white;
-    box-sizing: border-box;
-    position: relative;
+.window{
+    width:90%;
+    max-width:500px;
+    background:#000;
+    border:2px solid #fff;
+    box-shadow:4px 4px 0 #fff;
+    position:relative;
 }
 
-.title-bar {
-    background: #222;
-    padding: 5px;
-    text-align: center;
-    font-weight: bold;
-    border-bottom: 2px solid white;
-    font-size: 18px;
+.title-bar{
+    background:#222;
+    padding:5px;
+    border-bottom:2px solid #fff;
+    text-align:center;
+    font-weight:700;
+    font-size:18px;
 }
 
-.content {
-    padding: 15px;
-    font-size: 14px;
+.content{
+    padding:14px;
+    font-size:14px;
 }
 
-.ascii {
-    font-size: 12px;
-    white-space: pre;
+.ascii{
+    font-size:12px;
+    white-space:pre;
 }
 
-a {
-    color: grey;
-    text-decoration: none;
+a{
+    color:#999;
+    text-decoration:none;
 }
-a:hover {
-    text-decoration: underline;
-}
-
-@media (max-width: 768px) {
-    body {
-        font-size: 12px;
-    }
-
-    .window {
-        width: 95%;
-    }
-
-    .content {
-        padding: 10px;
-    }
-
-    .title-bar {
-        font-size: 16px;
-    }
-
-    a {
-        font-size: 12px;
-    }
+a:hover{
+    text-decoration:underline;
 }
 
-@media (min-width: 769px) {
-    body {
-        font-size: 16px;
-    }
-
-    .window {
-        width: 500px; 
-    }
-
-    .content {
-        padding: 20px;
-    }
-
-    .title-bar {
-        font-size: 20px;
-    }
-
-    a {
-        font-size: 16px;
-    }
+.close-btn{
+    font-size:19px;
+    cursor:pointer;
+    width:20px;
+    height:20px;
+    border:2px solid #fff;
+    border-radius:4px;
+    position:absolute;
+    top:5px;
+    right:5px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
 }
-.close-btn {
-    font-size: 20px;
-    cursor: pointer;
-    color: white;
-    width: 20px;
-    height: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 2px solid white;
-    border-radius: 4px;
-    position: absolute;
-    top: 5px;
-    right: 5px;
-    transition: background-color 0.3s, color 0.3s;
+.close-btn:hover{
+    background:red;
+    color:#fff;
+    transition:0.1s;
 }
 
-.close-btn:hover {
-    background-color: red;
-    color: white;
+.footer-text{
+    position:fixed;
+    bottom:10px;
+    left:10px;
+    font-size:11px;
+    color:#777;
 }
 
-.content {
-    padding: 15px;
-    font-size: 14px;
-}
-.footer-text {
-    position: fixed;
-    bottom: 10px;
-    left: 10px;
-    color: gray;
-    font-size: 12px;
-}
-.window {
-    animation: fade 0.25s ease;
-}
-
-@keyframes fade {
-    from { opacity: 0; transform: scale(0.97); }
-    to { opacity: 1; transform: scale(1); }
-}
