@@ -9,6 +9,7 @@
 </head>
 <body>
 
+    <!-- WELCOME WINDOW -->
     <div class="window" id="welcome-window">
         <div class="title-bar">
             <span class="close-btn" id="close-welcome">×</span>
@@ -38,43 +39,42 @@ __        _______ _     ____ ___  __  __ _____
         </div>
     </div>
 
-    <div class="window" id="n-w" style="display:none;">
+    <!-- NEWS WINDOW -->
+    <div class="window" id="news-window" style="display:none;">
         <div class="title-bar">
-            <span class="close-btn" id="c-n">×</span>
+            <span class="close-btn" id="close-news">×</span>
             <span>NEWS</span>
         </div>
         <div class="content">
             <h2>Updates</h2>
-            <ul id="n-l">
-                <li>No news yet</li>
+            <ul id="news-list">
+                <li>25.02.2025 — Website launched</li>
+                <li>26.02.2025 — Added ASCII UI design</li>
+                <li>27.02.2025 — News window added</li>
             </ul>
         </div>
     </div>
 
     <p class="footer-text">© 2025 Meanox. All rights reserved.</p>
 
-<script>
-    const wmain = document.getElementById('welcome-window')
-    const wnews = document.getElementById('n-w')
+    <!-- JS -->
+    <script>
+        const welcome = document.getElementById("welcome-window");
+        const news = document.getElementById("news-window");
 
-    const btnMainClose = document.getElementById('close-welcome')
-    const btnNewsClose = document.getElementById('c-n')
+        document.getElementById("close-welcome").onclick = () => {
+            welcome.style.display = "none";
+            news.style.display = "block";
+        };
 
-    btnMainClose.onclick = function () {
-        wmain.style.display = 'none'
-        wnews.style.display = 'block'
-    }
-
-    btnNewsClose.onclick = function () {
-        wnews.style.display = 'none'
-        wmain.style.display = 'block'
-    }
-</script>
+        document.getElementById("close-news").onclick = () => {
+            news.style.display = "none";
+            welcome.style.display = "block";
+        };
+    </script>
 
 </body>
 </html>
-
-
 
 
 
